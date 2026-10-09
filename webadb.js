@@ -180,7 +180,7 @@
 		this.ep_in = get_ep_num(match.alt.endpoints, "in");
 		this.ep_out = get_ep_num(match.alt.endpoints, "out");
 
-		this.transport.reset();
+		
 	}
 
 	Adb.WebUSB.Device.prototype.open = function(service) {
