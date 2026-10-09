@@ -174,14 +174,12 @@
 	};
 
 	Adb.WebUSB.Device = function(transport, match) {
-		this.transport = transport;
-		this.max_payload = 4096;
+    this.transport = transport;
+    this.max_payload = 4096;
 
-		this.ep_in = get_ep_num(match.alt.endpoints, "in");
-		this.ep_out = get_ep_num(match.alt.endpoints, "out");
-
-		
-	}
+    this.ep_in = get_ep_num(match.alt.endpoints, "in");
+    this.ep_out = get_ep_num(match.alt.endpoints, "out");
+}
 
 	Adb.WebUSB.Device.prototype.open = function(service) {
 		return Adb.Stream.open(this, service);
